@@ -48,22 +48,51 @@ function generatePassword() {
       console.log("number");
       
    }
-   var length = prompt("Choose the number of charecters you would like for the length of your password.");*/
 
 
- var length = prompt("choose a number");
+*/
+/*
+ var length = prompt("Choose the number of charecters you would like for the length of your password.");
+ for (length = 8; length < 128; length++) {
+ createrandomstring(length)
+  }
+ if (length < 8) {
+     console.log("must be between 8 and 128 characters.");
+   } else {
+    createrandomstring(length)
+   }
+   
+  */
+  /*else {
+     console.log("You choosed " + length + " characters for your password.");
+   }  if (length = 0) {
+     console.log("you must enter a number.")
+   }
+ */
+  var length = prompt("Choose the number of charecters you would like for the length of your password.");
   
+  if (length < 8) {
+    var length = prompt("choose again")
+   } 
+ 
+
+// I need to connect the dots here. program needs to return to prompt window over and over until
+// 7 < length < 128
+
+
+
+
    var randomstring = "";
    createrandomstring(length)
-function createrandomstring(stringlength) {
-  
-  var posscharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+function createrandomstring(stringlength) { 
+  var possCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
   for(var i, i =0; i < stringlength; i++) {
-    randomstring += posscharacters.charAt(Math.floor(Math.random() * posscharacters.length))
-  
+    randomstring += possCharacters.charAt(Math.floor(Math.random() * possCharacters.length))
     }
 }
-  console.log(randomstring);
+alert(randomstring);
+
+
 
 
  
