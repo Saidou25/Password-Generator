@@ -48,15 +48,17 @@ function generatePassword() {
       console.log("number");
       
    }
-   */
- 
+   var length = prompt("Choose the number of charecters you would like for the length of your password.");*/
+
+
+ var length = prompt("choose a number");
   
    var randomstring = "";
-   createrandomstring()
-function createrandomstring() {
+   createrandomstring(length)
+function createrandomstring(stringlength) {
   
   var posscharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-  for(var i, i =0; i < posscharacters.length; i++) {
+  for(var i, i =0; i < stringlength; i++) {
     randomstring += posscharacters.charAt(Math.floor(Math.random() * posscharacters.length))
   
     }
