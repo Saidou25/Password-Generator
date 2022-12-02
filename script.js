@@ -6,7 +6,7 @@ function generatePassword() {
   var length = parseInt(prompt("Please choose a number between 8 and 128 for the length of your password."));
   
   if (!length || length < 8 || length > 128) {
-alert("Your number has to be berween 8 and 9. Please try again.")
+alert("Your number has to be berween 8 and 128. Please try again.")
     generatePassword();
     return "";
    } 
@@ -25,23 +25,28 @@ alert("Your number has to be berween 8 and 9. Please try again.")
   if (isUppercase) {
     //use uppercase letters
     console.log("uppercase");
-  
+    console.log(uppercase);
   }
-  
+  else 
   if (isLowercase) {
     //use lowercase letters
     console.log("lowercase");
-  
+    console.log(uppercase += lowercase);
   }
+  else
   
   if (isSpecial) {
     //use special characters
     console.log("special");
   
-  }
+  } else
   if (isNumber) {
     //use numbers
     console.log("number");
+  }
+  
+var possCharactersAll = uppercase += lowercase += special += number;
+console.log(possCharactersAll);
 
     var randomstring = "";
 createrandomstring(length)
@@ -49,18 +54,19 @@ function createrandomstring(stringlength) {
   var possCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
   for (var i, i = 0; i < stringlength; i++) {
     randomstring += possCharacters.charAt(Math.floor(Math.random() * possCharacters.length))
-  }
-}
+ 
+  } 
+}  alert(randomstring);
  }
- alert(randomstring);
-  
-}
+ 
+ 
+
 
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector("#randomstring");
 
   passwordText.value = password;
 
