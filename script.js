@@ -15,7 +15,7 @@ alert("Your number has to be berween 8 and 128. Please try again.")
   var isLowercase = confirm("Would you like to use lowercase ?");
   var isSpecial = confirm("Would you like to use special chatacter ?");
   var isNumber = confirm("Would you like to use numbers ?");
-
+  var possCharacters = ""
 
   var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -23,50 +23,51 @@ alert("Your number has to be berween 8 and 128. Please try again.")
   var special = "#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
   if (isUppercase) {
-    //use uppercase letters
     console.log("uppercase");
-    console.log(uppercase);
+    possCharacters += uppercase;
   }
-  else 
+ 
   if (isLowercase) {
-    //use lowercase letters
     console.log("lowercase");
-    console.log(uppercase += lowercase);
+    possCharacters += lowercase;
   }
-  else
-  
+
   if (isSpecial) {
-    //use special characters
     console.log("special");
+    possCharacters += special;
   
-  } else
+  } 
+
   if (isNumber) {
-    //use numbers
     console.log("number");
+    possCharacters += number;
+  }
+
+  if ( isLowercase || isUppercase || isSpecial || isNumber) {
+
+  } else {
+    alert("Please choose at least one type of character.");
+    return "";
   }
   
-var possCharactersAll = uppercase += lowercase += special += number;
-console.log(possCharactersAll);
+console.log(possCharacters);
 
     var randomstring = "";
 createrandomstring(length)
 function createrandomstring(stringlength) {
-  var possCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  
   for (var i, i = 0; i < stringlength; i++) {
     randomstring += possCharacters.charAt(Math.floor(Math.random() * possCharacters.length))
- 
-  } 
+ } 
 }  alert(randomstring);
  }
  
  
 
-
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#randomstring");
+  var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
