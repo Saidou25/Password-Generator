@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  console.log("Please choose a number between 8 and 128 for the length of your password.")
+ 
   var length = parseInt(prompt("Please choose a number between 8 and 128 for the length of your password."));
   //------------choosing the lengh of the password------------------
   if (!length || length < 8 || length > 128) {
@@ -27,7 +27,7 @@ alert("Your number has to be berween 8 and 128. Please try again.")
 
 //-------------------building up possCharacters by concatenating user's input
   if (isUppercase) {
-    console.log("uppercase");
+  
     possCharacters += uppercase;
   }
  
@@ -37,18 +37,18 @@ alert("Your number has to be berween 8 and 128. Please try again.")
   }
 
   if (isSpecial) {
-    console.log("special");
+   
     possCharacters += special;
   
   } 
 
   if (isNumber) {
-    console.log("number");
+   
     possCharacters += number;
   }
 
   if ( isLowercase || isUppercase || isSpecial || isNumber) {
-    console.log("Characters you choosed.", possCharacters);
+
   } else {
     alert("Please choose at least one type of character.");
     return "";
