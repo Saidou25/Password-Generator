@@ -65,7 +65,7 @@ alert("Your number has to be berween 8 and 128. Please try again.")
  } 
 }  alert(randomstring);
 
-   //return ""; // avoids "undefined" message after delivery of the password
+   
  }
  
   function writePassword() {
