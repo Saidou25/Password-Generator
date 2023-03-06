@@ -3,18 +3,21 @@
 *::after {
   box-sizing: border-box;
 }
-
+body {
+  background-color: black;
+}
 html,
 body,
 .wrapper {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: rgb(202, 234, 240);
 }
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #53a1f0;
 }
 
 .wrapper {
@@ -31,7 +34,7 @@ header {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(197, 20%, 44%);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
